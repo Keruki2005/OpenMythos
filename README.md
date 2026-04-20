@@ -71,6 +71,41 @@ print(
 
 
 
+## Model Variants
+
+Pre-configured scales from 1B to 1T parameters:
+
+```python
+from open_mythos import (
+    mythos_1b,
+    mythos_3b,
+    mythos_10b,
+    mythos_50b,
+    mythos_100b,
+    mythos_500b,
+    mythos_1t,
+    OpenMythos,
+)
+
+cfg = mythos_7b()  # returns a MythosConfig
+model = OpenMythos(cfg)
+
+total = sum(p.numel() for p in model.parameters())
+print(f"Parameters: {total:,}")
+```
+
+| Variant | `dim` | Experts | `expert_dim` | Loop iters | Context | Max output |
+|---|---|---|---|---|---|---|
+| `mythos_1b` | 2048 | 64 | 2048 | 16 | 4k | 4k |
+| `mythos_3b` | 3072 | 64 | 4096 | 16 | 4k | 4k |
+| `mythos_10b` | 4096 | 128 | 5632 | 24 | 8k | 4k |
+| `mythos_50b` | 6144 | 256 | 9728 | 32 | 8k | 4k |
+| `mythos_100b` | 8192 | 256 | 13568 | 32 | 1M | 128k |
+| `mythos_500b` | 12288 | 512 | 23040 | 48 | 1M | 128k |
+| `mythos_1t` | 16384 | 512 | 34560 | 64 | 1M | 128k |
+
+---
+
 ## Documentation
 
 | Page | Description |
