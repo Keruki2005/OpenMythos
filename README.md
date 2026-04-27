@@ -415,6 +415,7 @@ Theoretical analysis suggests 2-3x improvements in inference throughput. For a d
 - Relaxed Recursive Transformers — Effective Parameter Sharing with Layer-wise LoRA: https://arxiv.org/pdf/2410.20672
 - Mixture-of-Depths Attention: https://arxiv.org/abs/2603.15619
 - Hyperloop Transformers: https://arxiv.org/abs/2604.21254
+- The Recurrent Transformer: Greater Effective Depth and Efficient Decoding: https://arxiv.org/abs/2604.21215
 
 ---
 
